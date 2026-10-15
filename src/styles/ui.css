@@ -1,0 +1,209 @@
+/* QRCodeScan-Browser 共享样式（popup 与结果窗口共用） */
+:root {
+  --bg: #f8f9fa;
+  --card: #ffffff;
+  --text: #202124;
+  --muted: #5f6368;
+  --primary: #1a73e8;
+  --primary-hover: #1765cc;
+  --border: #dadce0;
+  --error: #d93025;
+  --ok-bg: #e8f0fe;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 340px;
+  font: 13px/1.6 -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.header {
+  padding: 12px 16px 4px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.hint {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+kbd {
+  padding: 1px 5px;
+  border: 1px solid var(--border);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  background: var(--card);
+  font-size: 11px;
+}
+
+.dropzone {
+  margin: 12px 16px;
+  padding: 20px;
+  text-align: center;
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+  background: var(--card);
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.dropzone.dragover {
+  border-color: var(--primary);
+  background: var(--ok-bg);
+}
+
+.dz-title {
+  margin: 0 0 10px;
+  color: var(--muted);
+}
+
+.status {
+  margin: 8px 16px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--ok-bg);
+  color: var(--primary);
+  font-size: 12px;
+  word-break: break-all;
+}
+
+.status.busy::before {
+  content: "⏳ ";
+}
+
+.preview-wrap {
+  margin: 8px 16px;
+  text-align: center;
+}
+
+.preview-wrap img {
+  max-width: 100%;
+  max-height: 140px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+}
+
+.card-list {
+  margin: 8px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--card);
+}
+
+.card-meta {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.badge {
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--ok-bg);
+  color: var(--primary);
+  font-size: 11px;
+}
+
+.badge-muted {
+  background: var(--bg);
+  color: var(--muted);
+}
+
+.card-text {
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-size: 13px;
+  user-select: text;
+}
+
+.qr-link {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.qr-link:hover {
+  color: var(--primary-hover);
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.btn {
+  padding: 5px 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card);
+  color: var(--text);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--bg);
+}
+
+.btn-primary {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.error-panel {
+  margin: 8px 16px 16px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--error);
+  border-radius: 10px;
+  background: var(--card);
+}
+
+.error-title {
+  margin: 0 0 6px;
+  font-size: 14px;
+  color: var(--error);
+}
+
+.error-detail {
+  margin: 0 0 8px;
+  color: var(--text);
+  word-break: break-all;
+}
+
+.tips {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.footer {
+  padding: 8px 16px 12px;
+  color: var(--muted);
+  font-size: 11px;
+  text-align: center;
+}

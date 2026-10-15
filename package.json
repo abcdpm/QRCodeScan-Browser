@@ -1,0 +1,22 @@
+{
+  "name": "qrcodescan-browser",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Chrome extension: quickly decode QR code images into text with clickable links. Fully offline via zxing-wasm.",
+  "license": "MIT",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "icons": "node scripts/gen-icons.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node scripts/build.mjs --test && node --test tests/"
+  },
+  "dependencies": {
+    "zxing-wasm": "^3.1.5"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.287",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.7.2"
+  }
+}

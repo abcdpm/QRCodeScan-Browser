@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>解析二维码</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>解析二维码</h1>
+      <p class="hint">拖入图片 / <kbd>Ctrl</kbd>+<kbd>V</kbd> 粘贴截图 / 点击选择文件</p>
+    </header>
+
+    <div id="dropzone" class="dropzone">
+      <p class="dz-title">将二维码图片拖到这里</p>
+      <button id="pick-btn" class="btn btn-primary" type="button">选择图片…</button>
+      <input id="file-input" type="file" accept="image/*" multiple hidden />
+    </div>
+
+    <div id="status" class="status" hidden></div>
+    <div id="preview-wrap" class="preview-wrap" hidden>
+      <img id="preview" alt="待解析图片预览" />
+    </div>
+    <div id="result"></div>
+
+    <footer class="footer">本地解码 · 图片不上传 · <kbd>Alt</kbd>+<kbd>Q</kbd> 快速打开</footer>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
